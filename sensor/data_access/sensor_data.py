@@ -27,7 +27,7 @@ class SensorData:
         self, collection_name: str, database_name: Optional[str] = None) -> pd.DataFrame:
         try:
             """
-            export entire collectin as dataframe:
+            export entire collection as dataframe:
             return pd.DataFrame of collection
             """
             if database_name is None:

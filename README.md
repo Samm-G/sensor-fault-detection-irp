@@ -40,6 +40,12 @@ Before we run the project, make sure that you are having MongoDB in your local s
 ## Deployment Archietecture
 ![image](https://user-images.githubusercontent.com/57321948/193536973-4530fe7d-5509-4609-bfd2-cd702fc82423.png)
 
+## TODO:
+* Add a SLA Model Evaluation step in the pipeline to check if the base SLA Agreements from the client has been passed.
+  * SLA definitions will also be in it's own config file.
+* Add a Sampling/Complete Data Functionality for data ingestion from MongoDB.
+* Incorporate DVC into the Data Ingestion Pipeline:
+  * Makes it easier for artifact tracking.
 
 ### Step 1: Clone the repository
 ```bash
@@ -49,7 +55,7 @@ git clone https://github.com/sethusaim/Sensor-Fault-Detection.git
 ### Step 2- Create a conda environment after opening the repository
 
 ```bash
-conda create -n sensor python=3.7.6 -y
+conda create -n sensor python=3.8 -y
 ```
 
 ```bash

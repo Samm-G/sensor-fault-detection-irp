@@ -73,9 +73,8 @@ class DataValidation:
                     is_found = True 
                     status=False
                 report.update({column:{
-                    "p_value":float(is_same_dist.pvalue),
+                    "ks_stat_p_value":float(is_same_dist.pvalue),
                     "drift_status":is_found
-                    
                     }})
             
             drift_report_file_path = self.data_validation_config.drift_report_file_path

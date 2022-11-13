@@ -19,7 +19,7 @@ class DataIngestion:
 
     def export_data_into_feature_store(self) -> DataFrame:
         """
-        Export mongo db collection record as data frame into feature
+        Export mongo db collection record as data frame into feature store
         """
         try:
             logging.info("Exporting data from mongodb to feature store")
@@ -31,6 +31,8 @@ class DataIngestion:
             dir_path = os.path.dirname(feature_store_file_path)
             os.makedirs(dir_path,exist_ok=True)
             dataframe.to_csv(feature_store_file_path,index=False,header=True)
+
+            logging.info(f"Ingested Dataframe of Shape: {dataframe.shape} from collection {self.data_ingestion_config.collection_name}")
             return dataframe
         except  Exception as e:
             raise  SensorException(e,sys)
