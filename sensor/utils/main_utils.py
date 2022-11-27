@@ -73,11 +73,3 @@ def load_object(file_path: str) -> object:
             return dill.load(file_obj)
     except Exception as e:
         raise SensorException(e, sys) from e
-
-def set_env_variables():
-    try:
-        env_config = read_yaml_file('.env')
-        for key,val in env_config.items():
-            os.environ[str(key)] = str(val)
-    except Exception as e:
-        raise SensorException(e, sys) from e
