@@ -132,3 +132,27 @@ then run
 ```
 python main.py
 ```
+
+## Project Secrets needed:
+```
+# MongoDB Secrets:
+MONGO_DB_URL: 
+MONGO_DB_NAME:
+MONGO_DB_SCHEMA: 
+
+# For S3 Bucket Access..
+AWS_ACCESS_KEY_ID:
+AWS_SECRET_ACCESS_KEY:
+
+# In Github Action Secrets:
+AWS_ACCESS_KEY_ID:
+AWS_SECRET_ACCESS_KEY:
+AWS_REGION:
+AWS_ECR_LOGIN_URI:
+ECR_REPOSITORY_NAME:
+MONGO_DB_URL:
+
+# In sensor\constant\s3_bucket.py:
+TRAINING_BUCKET_NAME: (unique name)
+PREDICTION_BUCKET_NAME: (unique name)
+```

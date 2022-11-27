@@ -73,7 +73,7 @@ async def trainRouteClient():
 @app.get('/predict')
 async def predictRouteClient():
     try:
-        # Get data from user csv file
+        # TODO: Get data from user csv file
         # Convert csv to Dataframe
         user_df = pd.Dataframe()
 
